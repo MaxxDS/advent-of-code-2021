@@ -12,7 +12,7 @@ type Run = {
 export const loadFile = async (fileName: string): Promise<string> => {
   try {
     const data = await fs.readFile(
-      path.join(__dirname, '..', fileName),
+      path.join(__dirname, '..', 'src', fileName),
       'utf-8',
     );
     return data;
