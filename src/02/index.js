@@ -14,15 +14,11 @@ const createInstructionPair = str => {
 };
 
 export const partOne = input => {
-  console.log(input);
+  //   console.log(input);
 
   let x = 0;
   let y = 0;
-  //   let i = 0;
 
-  //   console.log(input[0]);
-  //   console.log(input[0][0] === 'forward');
-  //   console.log(input[1]);
   input.forEach(instructionPair => {
     switch (instructionPair[0]) {
       case 'forward':
@@ -43,4 +39,41 @@ export const partOne = input => {
   return result;
 };
 
-export const partTwo = () => {};
+export const partTwo = input => {
+  let x = 0;
+  let y = 0;
+  let aim = 0;
+
+  input.forEach(instructionPair => {
+    switch (instructionPair[0]) {
+      case 'forward':
+        x = x + instructionPair[1];
+        y = -aim * instructionPair[1] < 0 ? y - aim * instructionPair[1] : 0;
+        console.log(instructionPair);
+        console.log(x);
+        console.log(y);
+        console.log(aim);
+        break;
+      case 'down':
+        aim = aim + instructionPair[1];
+        console.log(instructionPair);
+        console.log(x);
+        console.log(y);
+        console.log(aim);
+        break;
+      case 'up':
+        aim = aim - instructionPair[1];
+        console.log(instructionPair);
+        console.log(x);
+        console.log(y);
+        console.log(aim);
+        // y = y + instructionPair[1] > 0 ? 0 : y + instructionPair[1];
+        break;
+      default:
+        console.log('something went wrong');
+    }
+  });
+
+  let result = x * -y;
+  return result;
+};
