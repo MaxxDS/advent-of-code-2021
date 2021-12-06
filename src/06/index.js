@@ -14,11 +14,9 @@ const getNumberOfLanternFishAfterXDays = (input, x) => {
       } else if (result[j] === 0) {
         result[j] = 6;
         result.push(8);
-        // console.log(result);
       } else {
         console.log('error');
       }
-      //   console.log(result);
     }
     console.log(result);
   }
@@ -37,11 +35,6 @@ const getNumberOfFishWithXDaysToLive = input => {
   }, {});
 
   return map;
-
-  //   let obj = map;
-  //   // https://stackoverflow.com/questions/38824349/how-to-convert-an-object-to-an-array-of-key-value-pairs-in-javascript
-  //   let result = Object.entries(obj);
-  //   return result;
 };
 
 const getNumberOfFishAfterYDaysFromNumberOfFishWithXDaysToLiveObject = (
@@ -75,53 +68,26 @@ const getNumberOfFishAfterYDaysFromNumberOfFishWithXDaysToLiveObject = (
   if (typeof numberOfFishWithXDaysToLive['8'] === 'undefined') {
     numberOfFishWithXDaysToLive['8'] = 0;
   }
+  // je ne comprends pas, j ai bien sur essayé de faire une boucle en incrémentant
+  //   numberOfFishWithXDaysToLive['${i}'], mais ça ne fonctionnait pas.
 
-  //   let array = [
-  //     0, 0, 0, 0, 0, 0, 0, 0, 0,
-  //   ];
   let numberOfFishWithXDaysToLiveAsArray = Object.values(
     numberOfFishWithXDaysToLive,
   );
 
-  console.log('numberOfFishWithXDaysToLiveAsArray:');
-  console.log(numberOfFishWithXDaysToLiveAsArray);
-
-  //   console.log('numberOfFishWithXDaysToLiveOnTheNextDay:');
-  //   console.log(numberOfFishWithXDaysToLiveOnTheNextDay);
-
   let numberOfFishWithXDaysToLiveOnTheNextDayASArray = [
     0, 0, 0, 0, 0, 0, 0, 0, 0,
   ];
-  //   let numberOfFishWithXDaysToLiveAsArray = numberOfFishWithXDaysToLive.values();
-  //   console.log('numberOfFishWithXDaysToLiveAsArray:');
-  //   console.log(numberOfFishWithXDaysToLiveAsArray);
-  //   console.log('numberOfFishWithXDaysToLiveOnTheNextDayASArray:');
-  //   console.log(numberOfFishWithXDaysToLiveOnTheNextDayASArray);
 
   for (let i = 0; i < y; i++) {
-    // console.log('i:');
-    // console.log(i);
     for (let j = 0; j < 9; j++) {
-      //   console.log('j:');
-      //   console.log(j);
-
       if (j === 6) {
         numberOfFishWithXDaysToLiveOnTheNextDayASArray[j] =
           numberOfFishWithXDaysToLiveAsArray[j + 1] +
           numberOfFishWithXDaysToLiveAsArray[0];
       } else if (j >= 0 && j <= 7) {
-        // console.log('j2:');
-        // console.log(j);
-
-        // console.log('numberOfFishWithXDaysToLiveOnTheNextDayASArray[j]:');
-        // console.log(numberOfFishWithXDaysToLiveOnTheNextDayASArray[j]);
-
         numberOfFishWithXDaysToLiveOnTheNextDayASArray[j] =
           numberOfFishWithXDaysToLiveAsArray[j + 1];
-        // numberOfFishWithXDaysToLive["${j+1}"];
-
-        // console.log('numberOfFishWithXDaysToLiveOnTheNextDayASArray[j]:');
-        // console.log(numberOfFishWithXDaysToLiveOnTheNextDayASArray[j]);
       } else if (j === 8) {
         numberOfFishWithXDaysToLiveOnTheNextDayASArray[j] =
           numberOfFishWithXDaysToLiveAsArray[0];
