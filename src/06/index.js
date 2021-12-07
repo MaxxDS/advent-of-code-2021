@@ -41,35 +41,12 @@ const getNumberOfFishAfterYDaysFromNumberOfFishWithXDaysToLiveObject = (
   numberOfFishWithXDaysToLive,
   y,
 ) => {
-  if (typeof numberOfFishWithXDaysToLive['0'] === 'undefined') {
-    numberOfFishWithXDaysToLive['0'] = 0;
+  for (let i = 0; i < 9; i++) {
+    console.log(`${i}`);
+    if (typeof numberOfFishWithXDaysToLive[`${i}`] === 'undefined') {
+      numberOfFishWithXDaysToLive[[`${i}`]] = 0;
+    }
   }
-  if (typeof numberOfFishWithXDaysToLive['1'] === 'undefined') {
-    numberOfFishWithXDaysToLive['1'] = 0;
-  }
-  if (typeof numberOfFishWithXDaysToLive['2'] === 'undefined') {
-    numberOfFishWithXDaysToLive['2'] = 0;
-  }
-  if (typeof numberOfFishWithXDaysToLive['3'] === 'undefined') {
-    numberOfFishWithXDaysToLive['3'] = 0;
-  }
-  if (typeof numberOfFishWithXDaysToLive['4'] === 'undefined') {
-    numberOfFishWithXDaysToLive['4'] = 0;
-  }
-  if (typeof numberOfFishWithXDaysToLive['5'] === 'undefined') {
-    numberOfFishWithXDaysToLive['5'] = 0;
-  }
-  if (typeof numberOfFishWithXDaysToLive['6'] === 'undefined') {
-    numberOfFishWithXDaysToLive['6'] = 0;
-  }
-  if (typeof numberOfFishWithXDaysToLive['7'] === 'undefined') {
-    numberOfFishWithXDaysToLive['7'] = 0;
-  }
-  if (typeof numberOfFishWithXDaysToLive['8'] === 'undefined') {
-    numberOfFishWithXDaysToLive['8'] = 0;
-  }
-  // je ne comprends pas, j ai bien sur essayé de faire une boucle en incrémentant
-  //   numberOfFishWithXDaysToLive['${i}'], mais ça ne fonctionnait pas.
 
   let numberOfFishWithXDaysToLiveAsArray = Object.values(
     numberOfFishWithXDaysToLive,
@@ -96,10 +73,10 @@ const getNumberOfFishAfterYDaysFromNumberOfFishWithXDaysToLiveObject = (
     numberOfFishWithXDaysToLiveAsArray = [
       ...numberOfFishWithXDaysToLiveOnTheNextDayASArray,
     ];
-    console.log('i+1:');
-    console.log(i + 1);
-    console.log('numberOfFishWithXDaysToLiveAsArray:');
-    console.log(numberOfFishWithXDaysToLiveAsArray);
+    // console.log('i+1:');
+    // console.log(i + 1);
+    // console.log('numberOfFishWithXDaysToLiveAsArray:');
+    // console.log(numberOfFishWithXDaysToLiveAsArray);
   }
 
   let sum = 0;

@@ -77,6 +77,14 @@ Fork it/clone it, and get started!
         </a>
       </td>
     </tr>
+    <tr>
+      <td>Day 07</td>
+      <td>
+        <a href="https://github.com/pathto/repo/tree/main/src/07">
+          <img src="https://badgen.net/badge/07/%E2%98%85%E2%98%85/green" alt="" />
+        </a>
+      </td>
+    </tr>
   </tbody>
 </table>
 
