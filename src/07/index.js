@@ -9,9 +9,10 @@ export const formatInput = input => {
 export const partOne = input => {
   let fuelCostForHorizontalPosition = {};
   let positionMax = max(input);
+
   console.log({ positionMax });
   for (let i = 0; i <= positionMax; i++) {
-    var fuelCostForThisHorizontalPosition = 0;
+    let fuelCostForThisHorizontalPosition = 0;
     for (let j = 0; j < input.length; j++) {
       let distance = Math.abs(i - input[j]);
       fuelCostForThisHorizontalPosition =
@@ -29,11 +30,14 @@ export const partOne = input => {
 export const partTwo = input => {
   let fuelCostForHorizontalPosition = {};
   let positionMax = max(input);
+
   console.log({ positionMax });
   for (let i = 0; i <= positionMax; i++) {
-    var fuelCostForThisHorizontalPosition = 0;
+    let fuelCostForThisHorizontalPosition = 0;
+
     for (let j = 0; j < input.length; j++) {
       let distance = Math.abs(i - input[j]);
+
       for (let k = 1; k <= distance; k++) {
         fuelCostForThisHorizontalPosition =
           fuelCostForThisHorizontalPosition + k;
