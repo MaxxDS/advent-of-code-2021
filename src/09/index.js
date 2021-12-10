@@ -1,4 +1,4 @@
-import { forEach, isNumber, min, isEqual, some } from 'lodash';
+import { forEach, min, some } from 'lodash';
 
 let lowPoints = [];
 let table = [];
@@ -77,9 +77,7 @@ const pointIsNotInBasin = (basin, x, y) => {
 
 const getNearbyPoints = (x, y) => {
   let nearbyPoints = [];
-  //   console.log({ table });
-  //   console.log({ x });
-  //   console.log({ y });
+
   if (y === 0) {
     if (x === 0) {
       nearbyPoints.push({ x: x, y: y + 1 });
@@ -129,6 +127,7 @@ const height = (x, y) => {
 
 const getLowPoints = table => {
   lowPoints = [];
+
   forEach(table, function (line, y) {
     forEach(line, function (height, x) {
       let nearbyHeights = [];
@@ -143,9 +142,7 @@ const getLowPoints = table => {
 
 const getNearbyHeights = (x, y) => {
   let nearbyHeights = [];
-  //   console.log({ table });
-  //   console.log({ x });
-  //   console.log({ y });
+
   if (y === 0) {
     if (x === 0) {
       nearbyHeights.push(table[y + 1][x]);
