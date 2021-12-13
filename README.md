@@ -109,6 +109,14 @@ Fork it/clone it, and get started!
         </a>
       </td>
     </tr>
+    <tr>
+      <td>Day 11</td>
+      <td>
+        <a href="https://github.com/pathto/repo/tree/main/src/11">
+          <img src="https://badgen.net/badge/11/%E2%98%85%E2%98%85/green" alt="" />
+        </a>
+      </td>
+    </tr>
   </tbody>
 </table>
 
