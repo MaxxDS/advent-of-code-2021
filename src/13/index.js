@@ -1,15 +1,4 @@
-import {
-  forEach,
-  intersection,
-  filter,
-  some,
-  cloneDeep,
-  slice,
-  pullAt,
-  uniqWith,
-  isEqual,
-  max,
-} from 'lodash';
+import { forEach, cloneDeep, slice, uniqWith, isEqual, max } from 'lodash';
 
 let dots = [];
 let instructions = [];
