@@ -55,16 +55,6 @@ const numberOfFlashesAfterNSteps = (allOctopussesEnergies, n) => {
       console.log(allOctopussesEnergies);
       answer2 = i;
     }
-    // console.log(i);
-    // console.log(allOctopussesEnergies);
-
-    // if (
-    //   allOctopussesEnergies[0].length * allOctopussesEnergies.length ===
-    //   octopussesThatFlashedAlreadyInThisStep.length
-    // ) {
-    //   allFlashesSYnch = true;
-    //   break;
-    // }
   }
   return numberOfFLashes;
 };
